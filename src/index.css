@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@layer base {
+  :root {
+    --primary: 244 63 94; /* rose-500 */
+    --primary-light: 254 205 211; /* rose-200 */
+    --primary-dark: 190 18 60; /* rose-700 */
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .glass-effect {
+    @apply bg-white/60 dark:bg-gray-900/60
+      backdrop-blur-xl
+      border border-white/30 dark:border-white/10
+      shadow-lg shadow-black/[0.03]
+      hover:bg-white/70 dark:hover:bg-gray-900/70
+      transition-all duration-300;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}

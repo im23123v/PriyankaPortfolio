@@ -1,0 +1,14 @@
+@keyframes sparkle {
+  0% { 
+    transform: scale(0) translate(0, 0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% { 
+    transform: scale(0) translate(var(--spread-x, 30px), var(--spread-y, 30px)) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.animate-sparkle {
+  animation: sparkle 0.5s ease-out forwards;
+}
